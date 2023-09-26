@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ministerial_project>
+
+<div class="container-fluid">
+    <div class="container">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th width="10%">ID</th>
+                    <th width="20%">Tên đề tài</th>
+                    <th width="20%">Người thực hiện</th>
+                    <th width="30%">Mô tả</th>
+                    <th width="20%">Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var mpt in Model.Reverse())
+                {
+                    <tr>
+                        <td>@mpt.id</td>
+                        <td>@mpt.name</td>
+                        <td>@mpt.member</td>
+                        <td>@mpt.description</td>
+                        <td>@mpt.href</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

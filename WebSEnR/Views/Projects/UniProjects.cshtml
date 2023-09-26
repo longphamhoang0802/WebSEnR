@@ -1,0 +1,29 @@
+﻿@model IEnumerable<uni_project>
+
+<div class="container-fluid">
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th width="10%">ID</th>
+                <th width="20%">Tên đề tài</th>
+                <th width="20%">Người thực hiện</th>
+                <th width="30%">Mô tả</th>
+                <th width="20%">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var upt in Model.Reverse())
+            {                
+                <tr>
+                    <td>@upt.id</td>
+                    <td>@upt.name</td>
+                    <td>@upt.member</td>
+                    <td>@upt.description</td>
+                    <td>@upt.href</td>
+                </tr>  
+            }
+        </tbody>
+    </table>
+</div>
+</div>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<lab_member>
+
+<div class="container-fluid">
+    <div class="container">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Họ và tên</th>
+                    <th>Trường</th>
+                    <th>Khoa</th>
+                    <th>Khoá</th>
+                    <th>Role</th>
+                    <th>Giới thiệu bản thân</th>
+                    <th>Dự án đã tham gia</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var q in Model)
+                {
+                    <tr>
+                        <td>@q.id</td>
+                        <td>@q.name</td>
+                        <td>@q.school</td>
+                        <td>@q.facul</td>
+                        <td>@q.grade</td>
+                        <td>@q.role</td>
+                        <td>@q.desc</td>
+                        <td>@q.joined_prjs</td>                       
+                    </tr>
+                }
+            </tbody>
+        </table>        
+    </div>
+</div>
